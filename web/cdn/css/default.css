@@ -1,0 +1,106 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+html {
+  background-color: #171717;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: white;
+  margin: 0;
+}
+
+select {
+  -webkit-appearance: none;
+
+  height: 35px;
+  background-color: #192241;
+  color: #5c5d6b;
+  border: 1px solid #92ebf7;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+select#locales {
+  margin-right: 20px;
+}
+
+select:focus {
+  color: white;
+}
+
+button {
+  height: 36px;
+  width: 100px;
+  background-color: #7d3b93;
+  color: #f8f8ff;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ffc0ec;
+  color: black;
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+}
+
+div .error h1:hover {
+  color: #ff4c4c;
+}
+
+div .pinkText h1:hover {
+  color: #ffc0ec;
+}
+
+#main {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1 {
+  font-size: 60px;
+  display: inline-block;
+}
+
+.hover-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hover-grow:hover,
+.hover-grow:focus,
+.hover-grow:active {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}

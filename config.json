@@ -1,0 +1,183 @@
+{
+  "snipes": {
+    "atc_supported": true,
+    "wishlist_supported": true,
+    "wait_for_submit": false,
+    "locales": {
+      "default": {
+        "atc_url": "https://www.snipes.com/add-product?format=ajax",
+        "atc_redirect_url": "https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Checkout-Login",
+        "wishlist_url": "https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.com/wishlist"
+      },
+      "com": {
+        "display_name": "Germany",
+        "atc_url": "https://www.snipes.com/add-product?format=ajax",
+        "atc_redirect_url": "https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Checkout-Login",
+        "wishlist_url": "https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.com/wishlist"
+      },
+      "at": {
+        "display_name": "Austria",
+        "atc_url": "https://www.snipes.at/add-product?format=ajax",
+        "atc_redirect_url": "https://www.snipes.at/on/demandware.store/Sites-snse-DE-AT-Site/de_AT/Checkout-Login",
+        "wishlist_url": "https://www.snipes.at/on/demandware.store/Sites-snse-DE-AT-Site/de_AT/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.at/wishlist"
+      },
+      "nl": {
+        "display_name": "Netherlands",
+        "atc_url": "https://www.snipes.nl/on/demandware.store/Sites-snse-NL-BE-Site/nl_NL/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.nl/on/demandware.store/Sites-snse-NL-BE-Site/nl_NL/Checkout-Login",
+        "wishlist_url": "https://www.snipes.nl/on/demandware.store/Sites-snse-NL-BE-Site/nl_NL/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.nl/wishlist"
+      },
+      "fr": {
+        "display_name": "France",
+        "atc_url": "https://www.snipes.fr/on/demandware.store/Sites-snse-FR-Site/fr_FR/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.fr/on/demandware.store/Sites-snse-FR-Site/fr_FR/Checkout-Login",
+        "wishlist_url": "https://www.snipes.fr/on/demandware.store/Sites-snse-FR-Site/fr_FR/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.fr/wishlist"
+      },
+      "it": {
+        "display_name": "Italy",
+        "atc_url": "https://www.snipes.it/on/demandware.store/Sites-snse-SOUTH-Site/it_IT/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.it/on/demandware.store/Sites-snse-SOUTH-Site/it_IT/Checkout-Login",
+        "wishlist_url": "https://www.snipes.it/on/demandware.store/Sites-snse-SOUTH-Site/it_IT/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.it/wishlist"
+      },
+      "ch/de": {
+        "display_name": "Switzerland (DE)",
+        "atc_url": "https://www.snipes.ch/on/demandware.store/Sites-snse-CH-Site/de_CH/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.ch/on/demandware.store/Sites-snse-CH-Site/de_CH/Checkout-Login",
+        "wishlist_url": "https://www.snipes.ch/on/demandware.store/Sites-snse-CH-Site/de_CH/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.ch/de/wishlist"
+      },
+      "ch/fr": {
+        "display_name": "Switzerland (FR)",
+        "atc_url": "https://www.snipes.ch/on/demandware.store/Sites-snse-CH-Site/fr_CH/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.ch/on/demandware.store/Sites-snse-CH-Site/fr_CH/Checkout-Login",
+        "wishlist_url": "https://www.snipes.ch/on/demandware.store/Sites-snse-CH-Site/fr_CH/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.ch/fr/wishlist"
+      },
+      "es": {
+        "display_name": "Spain",
+        "atc_url": "https://www.snipes.es/on/demandware.store/Sites-snse-SOUTH-Site/es_ES/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.es/on/demandware.store/Sites-snse-SOUTH-Site/es_ES/Checkout-Login",
+        "wishlist_url": "https://www.snipes.es/on/demandware.store/Sites-snse-SOUTH-Site/es_ES/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.es/wishlist"
+      },
+      "be/nl": {
+        "display_name": "Belgium (NL)",
+        "atc_url": "https://www.snipes.be/on/demandware.store/Sites-snse-NL-BE-Site/nl_BE/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.be/on/demandware.store/Sites-snse-NL-BE-Site/nl_BE/Checkout-Login",
+        "wishlist_url": "https://www.snipes.be/on/demandware.store/Sites-snse-NL-BE-Site/nl_BE/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.be/nl/wishlist"
+      },
+      "be/fr": {
+        "display_name": "Belgium (FR)",
+        "atc_url": "https://www.snipes.be/on/demandware.store/Sites-snse-NL-BE-Site/fr_BE/Cart-AddProduct?format=ajax",
+        "atc_redirect_url": "https://www.snipes.be/on/demandware.store/Sites-snse-NL-BE-Site/fr_BE/Checkout-Login",
+        "wishlist_url": "https://www.snipes.be/on/demandware.store/Sites-snse-NL-BE-Site/fr_BE/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://www.snipes.be/fr/wishlist"
+      }
+    }
+  },
+  "solebox": {
+    "atc_supported": true,
+    "wishlist_supported": false,
+    "wait_for_submit": false,
+    "locales": {
+      "default": {
+        "atc_url": "https://www.solebox.com/de_DE/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/de_DE/Checkout-Login"
+      },
+      "de_DE": {
+        "display_name": "Germany (DE)",
+        "atc_url": "https://www.solebox.com/de_DE/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/de_DE/Checkout-Login"
+      },
+      "en_DE": {
+        "display_name": "Germany (EN)",
+        "atc_url": "https://www.solebox.com/en_DE/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_DE/Checkout-Login"
+      },
+      "en_GB": {
+        "display_name": "United Kingdom",
+        "atc_url": "https://www.solebox.com/en_GB/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_GB/Checkout-Login"
+      },
+      "en_NL": {
+        "display_name": "Netherlands",
+        "atc_url": "https://www.solebox.com/en_NL/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_NL/Checkout-Login"
+      },
+      "en_FR": {
+        "display_name": "France",
+        "atc_url": "https://www.solebox.com/en_FR/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_FR/Checkout-Login"
+      },
+      "en_IT": {
+        "display_name": "Italy",
+        "atc_url": "https://www.solebox.com/en_IT/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_IT/Checkout-Login"
+      },
+      "en_BE": {
+        "display_name": "Belgium",
+        "atc_url": "https://www.solebox.com/en_BE/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_BE/Checkout-Login"
+      },
+      "en_ES": {
+        "display_name": "Spain",
+        "atc_url": "https://www.solebox.com/en_ES/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_ES/Checkout-Login"
+      },
+      "en_AT": {
+        "display_name": "Austria",
+        "atc_url": "https://www.solebox.com/en_AT/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_AT/Checkout-Login"
+      },
+      "en_CZ": {
+        "display_name": "Czech Republic",
+        "atc_url": "https://www.solebox.com/en_CZ/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_CZ/Checkout-Login"
+      },
+      "en_SK": {
+        "display_name": "Slovakia",
+        "atc_url": "https://www.solebox.com/en_SK/add-product?format=ajax",
+        "atc_redirect_url": "https://www.solebox.com/on/demandware.store/Sites-solebox-Site/en_SK/Checkout-Login"
+      }
+    }
+  },
+  "onygo": {
+    "atc_supported": true,
+    "wishlist_supported": true,
+    "wait_for_submit": false,
+    "locales": {
+      "default": {
+        "atc_url": "https://onygo.com/add-product?format=ajax",
+        "atc_redirect_url": "https://www.onygo.com/on/demandware.store/Sites-ong-DE-Site/de_DE/Checkout-Login"
+      }
+    }
+  },
+  "nprague": {
+    "atc_supported": true,
+    "wishlist_supported": false,
+    "wait_for_submit": false,
+    "locales": {
+      "default": {
+        "atc_url": "https://www.nprague.cz/action/Cart/addCartItem/",
+        "atc_redirect_url": "https://www.nprague.cz/objednavka/krok-1/"
+      }
+    }
+  },
+  "nbb": {
+    "atc_supported": true,
+    "wishlist_supported": false,
+    "wait_for_submit": true,
+    "locales": {
+      "default": {
+        "atc_url": "https://www.notebooksbilliger.de/merkzettel/action/add_product"
+      }
+    }
+  }
+}

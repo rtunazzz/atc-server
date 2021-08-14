@@ -1,0 +1,99 @@
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 110%;
+  top: -5%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transform: rotate(15deg);
+}
+
+.line::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  -webkit-animation: drop 7s 0s infinite;
+  animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+}
+
+.line:nth-child(1),
+.line:nth-child(3) {
+  width: 3px;
+}
+
+.line:nth-child(1) {
+  margin-left: -35%;
+}
+.line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffc0ec 75%,
+    #ffc0ec 100%
+  );
+}
+
+.line:nth-child(3) {
+  margin-left: 35%;
+}
+
+.line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #92ebf7 75%,
+    #92ebf7 100%
+  );
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://bonzay.io/favicon/favicon.ico" />
+  <meta property="og:locale" content="en_US" />
+  {{if .Title}}
+  <meta property="og:title" content="{{.Title}}" />
+  {{else}}
+  <meta property="og:title" content="BONZAY ATC" />
+  {{end}}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://atc.bonzay.io" />
+  <meta property="og:description" content="{{.Description}}" />
+  <meta name="theme-color" content="#92EBF7">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bonzay.io/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bonzay.io/favicon/favicon-16x16.png" />
+  <link rel="stylesheet" href="/css/background.css">
+  <link rel="stylesheet" href="/css/default.css">
+  <title>{{.Title}}</title>
+</head>
+<body>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div id="main">
+    {{if .IsError}}
+    <div class="fof error">
+      <h1 class="hover-grow">{{.Title}}</h1>
+      <p>{{.Description}}</p>
+    </div>
+    {{else}}
+    <div class="fof">
+      <h1>{{.Title}}</h1>
+      <p>{{.Description}}</p>
+    </div>
+    {{end}}
+  </div>
+</body>
+</html>

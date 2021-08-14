@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://bonzay.io/favicon/favicon.ico" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="{{.Site}} Locale Selector" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{.Site}} Locale selector for BONZAY ATC links." />
+  <meta name="theme-color" content="#92EBF7" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bonzay.io/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bonzay.io/favicon/favicon-16x16.png" />
+  <link rel="stylesheet" href="/css/default.css" />
+  <title>{{.Site}} Locale Selector</title>
+</head>
+
+<body>
+  <div id="main">
+    <div class="fof">
+      <h1>{{.Site}} Locale Selector</h1>
+      <br />
+      <br />
+      <div class="selecting">
+        <select id="locales">
+          <option selected disabled>Select your locale</option>
+          {{ range $key, $value := .Locales }}
+          <option value='{{ $value }}'>{{ $key }}</option>
+          {{ end }}
+        </select>
+        <button class="hover-grow" onclick="setCookie()">Set Locale</button>
+      </div>
+    </div>
+  </div>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+ </span>
+   <script>
+    function setCookie() {
+      var allLocales = document.getElementById("locales");
+      var selected = allLocales.options[allLocales.selectedIndex];
+      var locale = selected.value;
+      if (locale == 'Select your locale') {
+        return
+      }
+      document.cookie = "{{ .CookieName }}=" + locale + ";Expires=Tue, 01 Jan 2099 00:00:00 GMT;path=/";
+      var s = "Locale successfully set to <b>" + selected.textContent + "</b>!";
+      var d = document.querySelector('div.selecting');
+      d.innerHTML = s;
+      d.setAttribute('style', 'color: #66ff00;');
+      setTimeout(() => {
+        d.innerHTML = "Redirecting to {{.Site}} <b>" + selected.textContent + "</b>!";
+        location.replace('{{ .RedirectBase }}' + locale + '{{ .RedirectURI }}');
+      },250);
+    }
+  </script>
+</body>
+
+</html>
