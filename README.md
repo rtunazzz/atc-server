@@ -1,8 +1,6 @@
-# ATC Server
+<p align="center"><img width=60% src="https://i.imgur.com/ZWAtLwR.png"></p>
 
-Lightweight and versatile ATC server made with Go
-
-## Running
+# Running
 
 ### With Go
 
@@ -44,7 +42,7 @@ docker run -p 9000:9000 atc-server
 
 3. Your server will now be available at `http://localhost:9000/`
 
-## Usage
+# Usage
 
 The server has 4 main routes:
 
@@ -52,6 +50,8 @@ The server has 4 main routes:
 - `/wishlist` - [docs](./docs/wishlist.md)
 - `/set_locale` - [docs](./docs/set_locale.md)
 - `/redirect` - [docs](./docs/redirect.md)
+
+---
 
 # Adding more sites
 
