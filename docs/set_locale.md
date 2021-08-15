@@ -8,3 +8,9 @@ Route for an user to set his preferred locale for both ATC and Adding to wishlis
 | ------- | --------------------- |
 | solebox | `/set_locale/solebox` |
 | snipes  | `/set_locale/snipes`  |
+
+## Examples
+
+Solebox - https://atc.bonzay.io/solebox/set_locale
+
+Snipes - https://atc.bonzay.io/snipes/set_locale
