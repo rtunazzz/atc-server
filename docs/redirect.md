@@ -3,7 +3,7 @@ Redirects you to the URL provided.
 ## Supported query params
 | Key 	| Description              	|
 |-----	|--------------------------	|
-| url 	| URL of where to redirect 	|
+| `url` | URL of where to redirect 	|
 
 ## Example
 Opens a product with SKU `553558-034` in the Nike app:
