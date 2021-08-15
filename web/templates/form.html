@@ -21,7 +21,7 @@
   <div id="main">
     <div class="fof pinkText">
       <h1 class="hover-grow">{{ .Message }} on {{ .Website }}...</h1>
-      <form id="autoSubmitForm" method="POST" action="{{ .FormURL }}">
+      <form id="autoSubmitForm" method="POST" action="{{ .SubmitUrl }}">
         {{ range $key, $value := .Fields }}
         <input type='hidden' name='{{ $key }}' id='{{ $key }}' value='{{ (index $value 0) }}'>
         {{ end }}
@@ -39,7 +39,7 @@
       form.submit();
       {{ if .Redirect }}
       sleep(300).then(() => {
-          window.location = '{{ .RedirectURL }}';
+          window.location = '{{ .RedirectUrl }}';
       });
       {{ end }}
     }
@@ -49,7 +49,7 @@
       form.submit();
       {{ if .Redirect }}
       await sleep(300);
-      window.location = '{{ .RedirectURL }}';
+      window.location = '{{ .RedirectUrl }}';
       {{ end }}
     }
     {{ end }}
