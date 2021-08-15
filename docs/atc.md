@@ -27,3 +27,9 @@ For example the query `?site=solebox&pid=123&key=value&quantity=1` would add the
 3. [`onygo`](https://www.onygo.com/)
 4. [`NBB`](https://www.notebooksbilliger.de/)
 5. [`nprague`](https://www.nprague.cz/)
+
+## Examples
+
+To add to cart [this product](https://www.solebox.com/en_DE/p/medicom-bearbrick_series_41_-_100%25-multicolor-0194593400000001.html) on Solebox, the ATC URL would look as follows:
+
+https://atc.bonzay.io/atc?site=solebox&pid=0194593400000001
