@@ -1,28 +1,9 @@
 <p align="center"><img width=60% src="https://i.imgur.com/ZWAtLwR.png"></p>
 
+# ATC Server made with Go
+> Live version available at https://atc.bonzay.io
+
 # Running
-
-### With Go
-
-Make sure you have [go](https://golang.org/doc/install) installed.
-
-1. Download modules
-
-```sh
-go mod download
-```
-
-2. Install modules
-
-```sh
-go install .
-```
-
-3. Run the server
-
-```sh
-go run main.go
-```
 
 ### With docker
 
@@ -49,6 +30,28 @@ docker run -p 9000:9000 atc-server
 ```
 
 3. Your server will now be available at `http://localhost:9000/`
+
+### With Go
+
+Make sure you have [go](https://golang.org/doc/install) installed.
+
+1. Download modules
+
+```sh
+go mod download
+```
+
+2. Install modules
+
+```sh
+go install .
+```
+
+3. Run the server
+
+```sh
+go run main.go
+```
 
 # Usage
 
