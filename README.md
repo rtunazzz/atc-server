@@ -28,6 +28,14 @@ go run main.go
 
 Make sure you have [docker](https://docs.docker.com/get-docker/) installed.
 
+#### You can either pull the image from dockerhub:
+
+```sh
+docker run -p 9000:9000 --name atc-server arturhnat/bonzay:atc-server
+```
+
+#### or after cloning this repo, you can:
+
 1. Build the image
 
 ```sh
