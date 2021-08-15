@@ -1,9 +1,9 @@
 # `/Redirect`
 Redirects you to the URL provided.
 ## Supported query params
-| Key 	| Value  	| Description              	|
-|-----	|--------	|--------------------------	|
-| url 	| an URL 	| URL of where to redirect 	|
+| Key 	| Description              	|
+|-----	|--------------------------	|
+| url 	| URL of where to redirect 	|
 
 ## Example
 Opens a product with SKU `553558-034` in the Nike app:
