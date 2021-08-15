@@ -2,7 +2,7 @@
 
 Adds a variant to your cart on one of the supported websites.
 
-## Supported query params
+## Required query params
 
 | Key    | Value                            |
 | ------ | -------------------------------- |
