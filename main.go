@@ -13,8 +13,6 @@ import (
 
 // Starting the server
 func main() {
-	// This is the domain the server should accept connections for.
-	// domains := []string{"bonzay.io", "www.bonzay.io"}
 	handler := i.NewRouter()
 
 	port := os.Getenv("PORT")
@@ -30,6 +28,7 @@ func main() {
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  120 * time.Second,
 	}
+
 	// Start the server
 	go func() {
 		log.Printf("Listening on port %s", port)
