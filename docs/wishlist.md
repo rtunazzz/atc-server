@@ -20,7 +20,11 @@ For example the query `?site=solebox&pid=123&key=value&quantity=1` would add the
 </form>
 ```
 
+## Overwriting the default form handler
+You can also specify the `run_script` and `script_name` properties in the [config.json](../config.json) file. This will then overwrite the default form submit script and instead execute the `script_name`, which is expected to be located in the [scripts](../web/scripts) folder. 
+
 ## Supported websites
 
 1. [`snipes`](https://www.snipes.com/)
 2. [`onygo`](https://www.onygo.com/)
+3. [`nike`](https://www.nike.com/)
