@@ -193,6 +193,16 @@
         "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
         "wishlist_redirect_url": "https://nike.com/cart"
       },
+      "us": {
+        "display_name": "United States",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/us/cart"
+      },
+      "ca": {
+        "display_name": "Canada",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/ca/cart"
+      },
       "gb": {
         "display_name": "United Kingdom",
         "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
