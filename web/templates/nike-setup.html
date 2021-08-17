@@ -86,7 +86,7 @@
     <script>
       function setCookies() {
         var tokenField = document.getElementById("nike-authentication");
-        var token = tokenField.value;
+        var token = tokenField.value?.replaceAll('"', "");
         if (token.trim() == "") {
           tokenField.classList.add("error-glow");
           return;
