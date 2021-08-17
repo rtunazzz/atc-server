@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="https://bonzay.io/favicon/favicon.ico" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="{{ .Website }} ATC" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://atc.bonzay.io" />
-  <meta property="og:description" content="{{ .Website }} add to cart links for BONZAY" />
-  <meta name="theme-color" content="#92EBF7">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://bonzay.io/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="https://bonzay.io/favicon/favicon-16x16.png" />
-  <link rel="stylesheet" href="/css/default.css">
-  <title>{{ .Website }} ATC</title>
-</head>
-
-<body onload="runItUp()">
-  <div id="main">
-    <div class="fof pinkText">
-      <h1 class="hover-grow">{{ .Message }} on {{ .Website }}...</h1>
-      <form id="autoSubmitForm" method="POST" action="{{ .SubmitUrl }}">
-        {{ range $key, $value := .Fields }}
-        <input type='hidden' name='{{ $key }}' id='{{ $key }}' value='{{ (index $value 0) }}'>
-        {{ end }}
-      </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://bonzay.io/favicon/favicon.ico" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="{{ .Website }} ATC" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://atc.bonzay.io" />
+    <meta
+      property="og:description"
+      content="{{ .Website }} add to cart links for BONZAY"
+    />
+    <meta name="theme-color" content="#92EBF7" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://bonzay.io/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://bonzay.io/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="/css/default.css" />
+    <link rel="stylesheet" href="/css/background.css" />
+    <title>{{ .Website }} ATC</title>
+    <script>
+      function runItUp() {
+        console.log("ok");
+      }
+    </script>
+  </head>
+  <body onload="runItUp()">
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
-  </div>
+    <div id="main">
+      <div class="fof pinkText">
+        <h1 class="hover-grow">{{ .Message }} on {{ .Website }}...</h1>
+        <form id="autoSubmitForm" method="POST" action="{{ .SubmitUrl }}">
+          {{ range $key, $value := .Fields }}
+          <input
+            type="hidden"
+            name="{{ $key }}"
+            id="{{ $key }}"
+            value="{{ (index $value 0) }}"
+          />
+          {{ end }}
+        </form>
+      </div>
+    </div>
+  </body>
+  {{ if .RunScript }}
+  <script src="/scripts/{{ .ScriptName}}"></script>
+  {{
+     else
+  }}
   <script>
     function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
-    
-    {{ if .WaitForSubmit }}
-    function runItUp() {
-      var form = document.getElementById("autoSubmitForm");
-      form.submit();
-      {{ if .Redirect }}
-      sleep(300).then(() => {
-          window.location = '{{ .RedirectUrl }}';
-      });
-      {{ end }}
-    }
-    {{ else }}
-    async function runItUp() {
-      var form = document.getElementById("autoSubmitForm");
-      form.submit();
-      {{ if .Redirect }}
-      await sleep(300);
-      window.location = '{{ .RedirectUrl }}';
-      {{ end }}
-    }
-    {{ end }}
 
+      {{ if .WaitForSubmit }}
+      function runItUp() {
+        var form = document.getElementById("autoSubmitForm");
+        form.submit();
+        {{ if .Redirect }}
+        sleep(300).then(() => {
+            window.location = '{{ .RedirectUrl }}';
+        });
+        {{ end }}
+      }
+      {{ else }}
+      async function runItUp() {
+        var form = document.getElementById("autoSubmitForm");
+        form.submit();
+        {{ if .Redirect }}
+        await sleep(300);
+        window.location = '{{ .RedirectUrl }}';
+        {{ end }}
+      }
+      {{ end }}
   </script>
-</body>
-
+  {{
+    end
+  }}
 </html>

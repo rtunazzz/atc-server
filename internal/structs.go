@@ -22,8 +22,11 @@ type SiteConfig struct {
 	WishlistSupported bool              `json:"wishlist_supported"` // Whether or not wishlist request type is supported
 	WaitForSubmit     bool              `json:"wait_for_submit"`    // Whether or not JS will wait with redirecting until request was successfully submitted
 	Locales           map[string]Locale `json:"locales"`            // Map of locales, there always needs to be at least one `default` one
+	RunScript         bool              `json:"run_script"`         // Runs a script instead of the default form handler
+	ScriptName        string            `json:"script_name"`        // name of the script to run, the script then need to be localed under /web/scripts/<scriptname>.js
 }
 
+// Loads the default config
 func loadConfig(filename string) (config map[string]SiteConfig, err error) {
 	jsonFile, err := os.Open(filename)
 	if err != nil {
@@ -46,4 +49,6 @@ type FormData struct {
 	Redirect      bool       // Whether or not to redirect user after form submit
 	RedirectUrl   string     // Where to redirect the user
 	Fields        url.Values // Form fields
+	RunScript     bool       // Runs a script instead of the default form handler
+	ScriptName    string     // Name of the script to run
 }

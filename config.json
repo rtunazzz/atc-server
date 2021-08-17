@@ -155,7 +155,9 @@
     "locales": {
       "default": {
         "atc_url": "https://onygo.com/add-product?format=ajax",
-        "atc_redirect_url": "https://www.onygo.com/on/demandware.store/Sites-ong-DE-Site/de_DE/Checkout-Login"
+        "atc_redirect_url": "https://www.onygo.com/on/demandware.store/Sites-ong-DE-Site/de_DE/Checkout-Login",
+        "wishlist_url": "https://www.onygo.com/on/demandware.store/Sites-ong-DE-Site/de_DE/Wishlist-AddProduct?format=ajax",
+        "wishlist_redirect_url": "https://onygo.com/wishlist"
       }
     }
   },
@@ -177,6 +179,59 @@
     "locales": {
       "default": {
         "atc_url": "https://www.notebooksbilliger.de/merkzettel/action/add_product"
+      }
+    }
+  },
+  "nike": {
+    "run_script": true,
+    "script_name": "nike.js",
+    "atc_supported": false,
+    "wishlist_supported": true,
+    "wait_for_submit": false,
+    "locales": {
+      "default": {
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/cart"
+      },
+      "gb": {
+        "display_name": "United Kingdom",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/gb/cart"
+      },
+      "de": {
+        "display_name": "Germany",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/de/cart"
+      },
+      "be": {
+        "display_name": "Belgium",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/be/cart"
+      },
+      "es": {
+        "display_name": "Spain",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/es/cart"
+      },
+      "it": {
+        "display_name": "Italy",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/it/cart"
+      },
+      "pl": {
+        "display_name": "Poland",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/pl/cart"
+      },
+      "cz": {
+        "display_name": "Czech Republic",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/cz/cart"
+      },
+      "fr": {
+        "display_name": "France",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/fr/cart"
       }
     }
   }
