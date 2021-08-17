@@ -8,6 +8,14 @@ html {
   }
 }
 
+textarea {
+  text-align: center;
+  font: 400 13.3px "Inter";
+  padding: 1vh 1vw 1vh 1vw;
+  overflow: hidden;
+  resize: none;
+}
+
 html {
   background-color: #171717;
 }
@@ -18,7 +26,9 @@ body {
   margin: 0;
 }
 
-select {
+select,
+input,
+textarea {
   -webkit-appearance: none;
 
   height: 35px;
@@ -31,6 +41,58 @@ select {
   padding-left: 10px;
   padding-right: 10px;
   font-weight: bold;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.long-input {
+  width: 50vw;
+  height: 20vh;
+}
+
+.error-glow {
+  border: 1px solid #ff4c4c; /* some kind of blue border */
+
+  /* other CSS styles */
+
+  /* round the corners */
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+  /* make it glow! */
+  -webkit-box-shadow: 0px 0px 4px #ff4c4c;
+  -moz-box-shadow: 0px 0px 4px #ff4c4c;
+  box-shadow: 0px 0px 4px #ff4c4c; /* some variation of blue for the shadow */
+}
+
+.box {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.box input {
+  padding-left: 8.5px;
+  padding-right: 8.5px;
+}
+
+.box .label-text {
+  white-space: nowrap;
+  margin-right: 1vw;
+}
+
+.box span {
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  display: block;
 }
 
 select#locales {

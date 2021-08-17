@@ -24,9 +24,11 @@ For example the query `?site=solebox&pid=123&key=value&quantity=1` would add the
 
 1. [`snipes`](https://www.snipes.com/)
 2. [`onygo`](https://www.onygo.com/)
+3. [`nike`](https://www.nike.com/)
 
 ## Examples
 
 To add [this product](https://www.snipes.com/p/snipes-medium_logo_basketball_%28size_7%29-orange-00013801988994.html) to your wishlist, the URL would look as follows:
-
 https://atc.bonzay.io/wishlist?site=snipes&pid=00013801988994
+
+For nike, you will need the product ID which can be obtained through Nike's API. For example: https://atc.bonzay.io/wishlist?site=nike&productId=bd1642ef-da67-5d4f-aa6e-1c441779e5ca

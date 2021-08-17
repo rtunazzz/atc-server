@@ -19,13 +19,21 @@ func NewRouter() http.Handler {
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.Timeout(60 * time.Second))
 
-	staticPath, _ := filepath.Abs("./web/cdn/css")
-	fs := http.FileServer(http.Dir(staticPath))
-	router.Handle("/css/*", http.StripPrefix("/css/", fs))
+	// serve CSS directory
+	cssPath, _ := filepath.Abs("./web/cdn/css")
+	cssFs := http.FileServer(http.Dir(cssPath))
+	router.Handle("/css/*", http.StripPrefix("/css/", cssFs))
+
+	// serve scripts directory
+	scriptsPath, _ := filepath.Abs("./web/scripts")
+	scriptsFs := http.FileServer(http.Dir(scriptsPath))
+	router.Handle("/scripts/*", http.StripPrefix("/scripts/", scriptsFs))
 
 	// cookie routes
 	router.HandleFunc("/snipes/set_locale", setLocaleHandler("snipes"))
 	router.HandleFunc("/solebox/set_locale", setLocaleHandler("solebox"))
+
+	router.HandleFunc("/nike/set_locale", nikeCookieHandler())
 
 	// atc handling
 	atcHandler := router.Middlewares().HandlerFunc(submitFormHandler("addtocart"))

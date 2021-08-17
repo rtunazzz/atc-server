@@ -121,12 +121,14 @@ func submitFormHandler(formType string) http.HandlerFunc {
 
 		exer := t.Execute(w, FormData{
 			Message:       msg,
-			Website:       strings.Title(currentSite),
+			Website:       strings.ToUpper(currentSite),
 			SubmitUrl:     formUrl,
 			Redirect:      redirectUrl != "",
 			RedirectUrl:   redirectUrl,
 			WaitForSubmit: sites[currentSite].WaitForSubmit,
 			Fields:        q,
+			RunScript:     sites[currentSite].RunScript,
+			ScriptName:    sites[currentSite].ScriptName,
 		})
 
 		if exer != nil {
@@ -166,7 +168,38 @@ func setLocaleHandler(site string) http.HandlerFunc {
 			"Site":         strings.Title(siteLower),
 			"CookieName":   siteLower + "_locale",
 			"RedirectBase": redirectBase,
-			"RedirectURI":  "/login",
+			"RedirectURI":  "/",
+			"Locales":      localeMap,
+		}
+
+		t.Execute(w, m)
+	}
+}
+
+// Handler for setting nike locale
+func nikeCookieHandler() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		t, err := template.ParseFiles("./web/templates/nike-setup.html")
+		if err != nil {
+			log.Println(err)
+			errorPage := defaultHandler("Something went wrong.", "Internal server error. Please report this to the administrator.", true)
+			errorPage(w, r)
+			return
+		}
+
+		// Create a map of the found locales
+		var localeMap = make(map[string]string)
+		for symbol, locale := range sites["nike"].Locales {
+			if symbol != "default" {
+				localeMap[locale.DisplayName] = symbol
+			}
+		}
+
+		m := map[string]interface{}{
+			"Site":         "Nike",
+			"CookieName":   "nike_locale",
+			"RedirectBase": "https://nike.com/",
+			"RedirectURI":  "/cart",
 			"Locales":      localeMap,
 		}
 
@@ -190,7 +223,7 @@ func redirectHandler() http.HandlerFunc {
 
 		m := map[string]interface{}{
 			"Title": "Redirecting...",
-			"URL":   urls[0],
+			"Url":   urls[0],
 		}
 		t.Execute(w, m)
 	}

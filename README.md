@@ -1,6 +1,7 @@
 <p align="center"><img width=60% src="https://i.imgur.com/ZWAtLwR.png"></p>
 
 # ATC Server made with Go
+
 > Live version available at https://atc.bonzay.io
 
 # Running
@@ -12,7 +13,7 @@ Make sure you have [docker](https://docs.docker.com/get-docker/) installed.
 #### You can either pull the image from dockerhub:
 
 ```sh
-docker run -p 9000:9000 --name atc-server arturhnat/bonzay:atc-server
+docker run -p 9000:9000 --name atc-server arturhnat/atc-server:latest
 ```
 
 #### or after cloning this repo, you can:
@@ -74,6 +75,8 @@ Each site in the config file is expected to have the following structure:
 
 ```json
 "name_of_the_site": { // this will then be the required query parameter for the /atc and /wishlist routes
+    "run_script": false, // whether or not the default form handler should be overwritten with a different script
+    "script_name": "site.js", // name of the script to execute
     "atc_supported": true, // whether or not Adding to Cart is supported
     "wishlist_supported": true, // whether or not Adding to Wishlist is supported
     "wait_for_submit": false, // Whether or not should the script wait for the form to finish submitting before redirecting
