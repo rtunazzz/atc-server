@@ -82,8 +82,10 @@ Each site in the config file is expected to have the following structure:
     "wait_for_submit": false, // Whether or not should the script wait for the form to finish submitting before redirecting
     "locales": { // each entry in the locales object is understood as a new locale. There always has to be at least one, default one named 'default'.
       "default": {
-        "atc_url": "https://onygo.com/add-product?format=ajax",
-        "atc_redirect_url": "https://www.onygo.com/on/demandware.store/Sites-ong-DE-Site/de_DE/Checkout-Login"
+        "atc_url": "https://site.com/add-to-cart", // URL to which the ATC form gets POSTed
+        "atc_redirect_url": "https://site.com/checkout", // URL to which the user will be redirected after ATC, can be anything
+        "wishlist_url": "https://site.com/add-to-wishlist", // URL to which the Wishlist form gets POSTed
+        "wishlist_redirect_url": "https://site.com/wishlist", // URL to which the user will be redirected after ATC, can be anything
       }
     }
   }
