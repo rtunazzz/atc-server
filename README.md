@@ -73,7 +73,7 @@ If you'd want to add another site to the locale picker, all you need to do is ad
 
 Each site in the config file is expected to have the following structure:
 
-```json
+```js
 "name_of_the_site": { // this will then be the required query parameter for the /atc and /wishlist routes
     "run_script": false, // whether or not the default form handler should be overwritten with a different script
     "script_name": "site.js", // name of the script to execute
