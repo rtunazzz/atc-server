@@ -109,17 +109,12 @@
           locale +
           ";Expires=Tue, 01 Jan 2099 00:00:00 GMT;path=/";
         var s =
-          "Locale successfully set to <b>" + selected.textContent + "</b>!";
+          "Locale successfully set to <b>" +
+          selected.textContent +
+          "</b>! You may close this tab now.";
         var d = document.querySelector("div.selecting");
         d.innerHTML = s;
         d.setAttribute("style", "color: #66ff00;");
-        setTimeout(() => {
-          d.innerHTML =
-            "Redirecting to {{.Site}} <b>" + selected.textContent + "</b>!";
-          location.replace(
-            "{{ .RedirectBase }}" + locale + "{{ .RedirectURI }}"
-          );
-        }, 250);
       }
     </script>
   </body>
