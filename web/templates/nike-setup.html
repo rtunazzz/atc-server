@@ -84,6 +84,23 @@
       </div>
     </div>
     <script>
+      function getCookieValue(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+
+      var locale = getCookieValue("nike_locale");
+      if (locale) {
+        var allLocales = document.getElementById("locales");
+        var localeIndex = Array.from(allLocales).findIndex(
+          (el) => el.value == locale
+        );
+        if (localeIndex) {
+          allLocales.options[localeIndex].selected = true;
+        }
+      }
+
       function setCookies() {
         var tokenField = document.getElementById("nike-authentication");
         var token = tokenField.value?.replaceAll('"', "");

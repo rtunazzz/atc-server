@@ -43,8 +43,12 @@ textarea {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none underline;
+}
+
 a:visited {
-  text-decoration: none;
+  text-decoration: none underline;
   color: white;
 }
 
