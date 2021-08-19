@@ -75,7 +75,7 @@ Each site in the config file is expected to have the following structure:
 
 ```js
 "name_of_the_site": { // this will then be the required query parameter for the /atc and /wishlist routes
-    "run_script": false, // whether or not the default form handler should be overwritten with a different script
+    "run_script": true, // whether or not the default form handler should be overwritten with a different script, specified by the script_name below
     "script_name": "site.js", // name of the script to execute
     "atc_supported": true, // whether or not Adding to Cart is supported
     "wishlist_supported": true, // whether or not Adding to Wishlist is supported
