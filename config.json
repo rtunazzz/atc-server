@@ -233,6 +233,11 @@
         "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
         "wishlist_redirect_url": "https://nike.com/pl/cart"
       },
+      "pt": {
+        "display_name": "Portugal",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/pt/cart"
+      },
       "cz": {
         "display_name": "Czech Republic",
         "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
@@ -242,6 +247,16 @@
         "display_name": "France",
         "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
         "wishlist_redirect_url": "https://nike.com/fr/cart"
+      },
+      "mx": {
+        "display_name": "Mexico",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/mx/cart"
+      },
+      "au": {
+        "display_name": "Australia",
+        "wishlist_url": "https://api.nike.com/buy/list_items/v1/",
+        "wishlist_redirect_url": "https://nike.com/au/cart"
       }
     }
   }
