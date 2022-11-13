@@ -1,8 +1,5 @@
-<p align="center"><img width=60% src="https://i.imgur.com/ZWAtLwR.png"></p>
-
 # ATC Server made with Go
-
-> Live version available at https://atc.bonzay.io
+<p align="center"><img width=60% src="https://i.imgur.com/ZWAtLwR.png"></p>
 
 # Running
 
